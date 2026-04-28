@@ -35,16 +35,3 @@ def checkmate(board):
                 return
 
     print("Fail")
-
-
-def main():
-    board = [
-        ".R..",
-        ".K..",
-        "....",
-        "...."
-    ]
-    checkmate(board)
-
-if __name__ == "__main__":
-    main()
