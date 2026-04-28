@@ -1,7 +1,6 @@
 def checkmate(board):
     if not board: return
     
-    # Get king coords - people often use simple nested loops for this
     kx = ky = -1
     for i, row in enumerate(board):
         if 'K' in row:
@@ -12,8 +11,8 @@ def checkmate(board):
 
 
     ways_to_die = [
-        (0, 1, 'RQ'), (0, -1, 'RQ'), (1, 0, 'RQ'), (-1, 0, 'RQ'), # Straights
-        (1, 1, 'BQ'), (1, -1, 'BQ'), (-1, 1, 'BQ'), (-1, -1, 'BQ') # Diagonals
+        (0, 1, 'RQ'), (0, -1, 'RQ'), (1, 0, 'RQ'), (-1, 0, 'RQ'), # Straight
+        (1, 1, 'BQ'), (1, -1, 'BQ'), (-1, 1, 'BQ'), (-1, -1, 'BQ') # Diagonal
     ]
 
     for dx, dy, lethal in ways_to_die:
